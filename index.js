@@ -39,6 +39,51 @@ function showStock(){
             let newElem = document.createElement("li");
             newElem.textContent = array.data[i].name +"   -   "+ array.data[i].desc + "   -   "+ array.data[i].price + "   -   "+ array.data[i].quant;
             
+            //buttons added
+            let button1 = document.createElement("input");
+            button1.type = "button";
+            button1.value = "Buy-1";
+            button1.addEventListener("click", async function () {
+              // update quant by subtracting 1
+              array.data[i].quant -= 1;
+              try {
+                // update the quant on the server
+                await axios.put(`${url}/${array.data[i]._id}`, array.data[i]);
+              } catch (error) {
+                console.log(error);
+              }
+              showStock();
+            });
+    
+            let button2 = document.createElement("input");
+            button2.type = "button";
+            button2.value = "Buy-2";
+            button2.addEventListener("click", async function () {
+              // update quant by subtracting 2
+              array.data[i].quant -= 2;
+              try {
+                // update the quant on the server
+                await axios.put(`${url}/${array.data[i]._id}`, array.data[i]);
+              } catch (error) {
+                console.log(error);
+              }
+              showStock();
+            });
+    
+            let button3 = document.createElement("input");
+            button3.type = "button";
+            button3.value = "Buy-3";
+            button3.addEventListener("click", async function () {
+              // update quant by subtracting 3
+              array.data[i].quant -= 3;
+              try {
+                // update the quant on the server
+                await axios.put(`${url}/${array.data[i]._id}`, array.data[i]);
+              } catch (error) {
+                console.log(error);
+              }
+              showStock();
+            });
     
             newElem.append(button1, button2, button3);
             content.appendChild(newElem);
