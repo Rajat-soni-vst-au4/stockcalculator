@@ -6,6 +6,6 @@ As the data has to be added from the input and it will display on UI (name, desc
 
 Addtionally, every element of data list on UI has 3 buttons. as soon as we click on button-1, it will decrease the quantity by 1 on the UI as well as on the server. The same will work for the other buttons.
 
-I have tried and make this functionalities work. Please use your own API from crudcurd.com to experiment my code.
+I have tried and make this functionalities work. I have used the practice tries from api which is 100, so Please use your own API from crudcurd.com to experiment my code.
 
 Thank you.
